@@ -6,7 +6,7 @@ let win
 
 function createWindow () {
     // Создаёт окно браузера.
-    win = new BrowserWindow({ width: 1100, height: 800 })
+    win = new BrowserWindow({ width: 1300, height: 800 })
 
     // и загрузит index.html приложение.
     win.loadFile('index.html')

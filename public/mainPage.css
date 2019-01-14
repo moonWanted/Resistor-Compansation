@@ -12,12 +12,12 @@
     margin: 10px;
     padding: 5px;
 }
-.container{
+/*.container{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%)translateY(-50%);
-}
+}*/
 #calculate{
     position: absolute;
     left: 32px;
@@ -147,4 +147,16 @@ body {
 }
 .notVisible{
     display:none
+}
+.category-list {
+    list-style: none;
+    height: 400px;
+   /* border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
+}
+.category-list li {
+    page-break-inside: avoid;
+    break-inside: avoid;
 }

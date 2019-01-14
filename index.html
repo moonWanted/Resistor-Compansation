@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Resistance Calculation</title>
 
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,77 +19,163 @@
 </head>
 
 <body>
-<div class="calculationBlock container visible">
-    <div class="row justify-content-center">
-        <div class="col-3">
-            R1<input class="field" type="text" size="10" id="field1" value="800">
-        </div>
-        <div class="col-3">
-            <input class="field" type="text" size="10" id="v0" value="0.0565"> Vo, mV/V
+
+<div id="wrapper">
+
+
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Resistance Calculation
+                </a>
+            </li>
+            <li>
+                <a href="#" class="calculationItem">Calculation</a>
+            </li>
+            <li>
+                <a href="#" class="storageItem">Resistor storage</a>
+            </li>
+
+        </ul>
+    </div>
+    <!--sidebar-wrapper -->
+    <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Menu</a>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="container">
+
+
+                <div class="calculationBlock visible">
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            R1<input class="field" type="text" size="10" id="field1" value="800">
+                        </div>
+                        <div class="col-3">
+                            <input class="field" type="text" size="10" id="v0" value="0.0565"> Vo, mV/V
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            R2<input class="field" type="text" size="10" id="field2" value="800">
+                        </div>
+                        <div class="col-3">
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            R3<input class="field" type="text" size="10" id="field3" value="800">
+                        </div>
+                        <div class="col-3">
+
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            R4<input class="field" type="text" size="10" id="field4">
+                        </div>
+                        <div class="col-3">
+                            <input class="field" type="text" size="10" id="deltaField" value="del">Δ
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <input class="button" type="button" id="calculate" value="Calculate">
+                        </div>
+                        <div class="col-3">
+                            <input class="field" type="text" size="10" id="deltaField+5" value="del+5"> Δ+5%
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center bg-info text-white">
+                        <div class="col col-md-4">
+                            Recommended R1<input class="field" type="text" size="10" id="recommended">
+                        </div>
+                        <div class="col col-md-4">
+                            Recommended R2<input class="field" type="text" size="10" id="recommendedAsSecond">
+                        </div>
+                        <div class="col col-md-4">
+                            Received resistance<input class="field" type="text" size="10" id="receivedResistance">
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col col-md-4"></div>
+                        <div class="col col-md-4"></div>
+                        <div class="col col-md-4">
+                            <input class="button" type="button" id="calculateReceived" value="Calculate">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="storageBlock notVisible">
+                    <div class="row justify-content-center bg-info text-white">
+                        <div class="col col-md-4">
+                            <input class="button" type="button" id="findStorage" value="Find All">
+                        </div>
+                        <div class="col col-md-4">
+                            <input class="button" type="button" id="insertStorage" value="Insert One">
+                            <input class="field" type="text" size="10" id="insertField">
+                        </div>
+                        <div class="col col-md-4">
+                            <input class="button" type="button" id="deleteFromStorage" value="Delete One">
+                            <input class="field" type="text" size="10" id="deleteField">
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="category-list clearfix">
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+
         </div>
     </div>
+    <!-- /#page-content-wrapper -->
 
-    <div class="row justify-content-center">
-        <div class="col-3">
-            R2<input class="field" type="text" size="10" id="field2" value="800">
-        </div>
-        <div class="col-3">
-
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-3">
-            R3<input class="field" type="text" size="10" id="field3" value="800">
-        </div>
-        <div class="col-3">
-
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-3">
-            R4<input class="field" type="text" size="10" id="field4">
-        </div>
-        <div class="col-3">
-            <input class="field" type="text" size="10" id="deltaField" value="del">Δ
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-3">
-            <input class="button" type="button" id="calculate" value="Calculate">
-        </div>
-        <div class="col-3">
-            <input class="field" type="text" size="10" id="deltaField+5" value="del+5"> Δ+5%
-        </div>
-    </div>
-
-    <div class="row justify-content-center bg-info text-white">
-        <div class="col col-md-4">
-            Recommended R1<input class="field" type="text" size="10" id="recommended">
-        </div>
-        <div class="col col-md-4">
-            Recommended R2<input class="field" type="text" size="10" id="recommendedAsSecond">
-        </div>
-        <div class="col col-md-4">
-            Received resistance<input class="field" type="text" size="10" id="receivedResistance">
-        </div>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col col-md-4"></div>
-        <div class="col col-md-4"></div>
-        <div class="col col-md-4">
-            <input class="button" type="button" id="calculateReceived" value="Calculate">
-        </div>
-    </div>
 </div>
+<!-- /#wrapper -->
 
-
+<!-- Jquery core JavaScript -->
+<script>window.$ = window.jQuery = require('jquery');</script>
 
 <!-- Calculation function -->
 <script src="public/js/calculation.js" defer></script>
+
+<!-- Storage function -->
+<script src="public/js/storage.js" defer></script>
+
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    var calculationItem =$('.calculationItem');
+    var storageItem =$('.storageItem');
+    var calculationBlock =$('.calculationBlock');
+    var storageBlock =$('.storageBlock');
+
+    calculationItem.click(function () {
+        calculationBlock.removeClass('notVisible').addClass('visible');
+        storageBlock.removeClass('visible').addClass('notVisible');
+    });
+    storageItem.click(function () {
+        storageBlock.removeClass('notVisible').addClass('visible');
+        calculationBlock.removeClass('visible').addClass('notVisible');
+    });
+</script>
 
 </body>
 
